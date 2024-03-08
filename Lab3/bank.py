@@ -38,7 +38,7 @@ def find_customer(name, password, account_number):
             return customer
     else:
         print("your account/password number is wrong")
-        return None
+        return main()
 
 
 def main():
@@ -55,7 +55,7 @@ def main():
 
         # 입금, 출금, 잔액 확인 반복
         while True:
-            print("\n\nHello! This is UTS bank")
+            print("\n\nHello! Mr/Ms {0} This is UTS bank".format(customer.name))
             print("Choose an option:")
             print("1. Deposit")
             print("2. Withdraw")
