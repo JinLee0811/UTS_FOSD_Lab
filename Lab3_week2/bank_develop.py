@@ -57,26 +57,26 @@ def main():
         while True:
             print("\n\nHello! Mr/Ms {0} This is UTS bank".format(customer.name))
             print("Choose an option:")
-            print("1. Deposit")
-            print("2. Withdraw")
-            print("3. Check Balance")
-            print("4. Exit")
+            print("d. Deposit")
+            print("w. Withdraw")
+            print("s. Check Balance")
+            print("x. Exit")
 
-            choice = input("Enter your choice (1-4): ")
+            choice = input("Enter your choice (d~x): ")
 
-            if choice == "1":
+            if choice == "d":
                 deposit_amount = float(input("Enter the deposit amount: "))
                 customer.deposit(deposit_amount)
-            elif choice == "2":
+            elif choice == "w":
                 withdraw_amount = float(input("Enter the withdrawal amount: "))
                 customer.withdraw(withdraw_amount)
-            elif choice == "3":
+            elif choice == "s":
                 customer.check_balance()
-            elif choice == "4":
+            elif choice == "x":
                 print("\nThank you for using the UTS Banking Program. Goodbye!")
                 break
             else:
-                print("Invalid choice. Please enter a number between 1 and 4.")
+                print("Invalid choice. Please enter a number between d and x.")
 
     else:
         print("Customer not found. Exiting program.")
