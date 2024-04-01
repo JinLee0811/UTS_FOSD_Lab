@@ -1,4 +1,4 @@
-import validator as v
+import validatior as v
 
 
 class Person:
@@ -8,7 +8,7 @@ class Person:
         self.password = password
 
     def login(self):
-        return self.name, self.email, self.password
+        return v.validator.match(self.email, self.password)
 
     def validEmail(self):
         return v.validator.validEmail(self.email)
